@@ -1,10 +1,15 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
+require: functions.js
 theme: /
 
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
+        
+        state: notmelon
+            q: друг
+            a: На эльфийском, друг!
         
         state: Melon
             q: melon
@@ -14,6 +19,27 @@ theme: /
             state: Left
                 q: * *лев* *
                 a: Вас съел дракон.
+                
+                state: Right
+                    q: * *прав* *
+                    a: Перед вами сундук. Ваши действия?
+                    a: Вы видите сундук.
+                    
+                    state: open
+                        q: открыть
+                        a: В сундуке оказались монеты, ровно {{getRandomInt(10) }}
+                    
+                    state: Staight
+                        q: * *прям* *
+                        a: Вы очень долго рдете по темному коридору
+                        
+                        state: Back
+                            q: * (назад|~вернуться|~вернуть|~возвращаться) *
+                            a: Вход завалило. Выберите другое направление.
+                            
+                        state: NoMatchWay
+                            event: noMatch
+                            a: Выберите направление
         
     state: NoMatch
         event!: noMatch
