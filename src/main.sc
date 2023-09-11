@@ -19,6 +19,7 @@ theme: /
             state: Left
                 q: * *лев* *
                 a: Вас съел дракон.
+                go!: /Start
                 
                 state: Right
                     q: * *прав* *
@@ -40,7 +41,7 @@ theme: /
                         state: NoMatchWay
                             event: noMatch
                            # a: Выберите направление
-                           go: Left
+                           go: /Start/Melon/Left
         
     state: NoMatch
         event!: noMatch
