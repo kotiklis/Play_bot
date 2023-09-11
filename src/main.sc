@@ -5,6 +5,11 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Молви друг и войди!
+        
+        state: Melon
+            q: melon
+            a: Входите!
+        
 
     state: NoMatch
         event!: noMatch
