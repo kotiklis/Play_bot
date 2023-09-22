@@ -38,10 +38,10 @@ theme: /
                             q: * (назад|~вернуться|~вернуть|~возвращаться) *
                             a: Вход завалило. Выберите другое направление.
                             
-                        state: NoMatchWay
-                            event: noMatch
-                           # a: Выберите направление
-                           go: /Start/Melon/Left
+        state: NoMatchWay
+         event: noMatch
+            # a: Выберите направление
+            go!:: /Start/Melon/Left
         
     state: NoMatch
         event!: noMatch
