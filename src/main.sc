@@ -36,7 +36,9 @@ theme: /
                     
                 state: open
                     q:* *откр* *
-                    a: В сундуке оказались монеты, ровно  key = {{getRandomInt(10) }}
+                    a: В сундуке оказались монеты, ровно {{getRandomInt(10) }}
+                    def scenario():
+                        key = randrange(0, 10)
                     
                     state: goblin
                         q:* *забр* * 
