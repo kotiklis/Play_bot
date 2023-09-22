@@ -35,7 +35,7 @@ theme: /
                 a: Вы видите сундук.
                     
                 state: open
-                    q: открыть
+                    q:* *откр* *
                     a: В сундуке оказались монеты, ровно {{getRandomInt(10) }}
                     
             state: Staight
