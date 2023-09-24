@@ -46,7 +46,7 @@ theme: /
                         state: yes
                             q: да
                             a: Я пропущу тебя только за 7 монет.
-                            a: У тебя их $num.
+                            a: У тебя их $number .
                             
                         state: no
                             q: нет

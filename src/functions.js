@@ -1,4 +1,4 @@
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
-} 
-$num = getRandomInt(10);
+}
+$number = getRandomInt(10);
